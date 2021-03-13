@@ -1,11 +1,11 @@
 <aura:component controller="ThreeMethods" implements="flexipage:availableForAllPageTypes">
 <aura:handler name="init" value="{!this}" action="{!c.getStrippedContacts}"/>
 <aura:handler name="init" value="{!this}" action="{!c.getSecurityEnforced}"/>
-<aura:handler name="init" value="{!this}" action="{!c.getAwfulCons}"/>
+<aura:handler name="init" value="{!this}" action="{!c.getSchemaNamespace}"/>
 <aura:attribute name="strippedCons" type="Contact[]"/>
 <aura:attribute name="enforcedCons" type="Contact[]"/>
-<aura:attribute name="awfulCons" type="Contact[]"/>
+<aura:attribute name="schemaNamespaceCons" type="Contact[]"/>
     
-    <c:threeMethodsComponent strippedCons="{!v.strippedCons}" enforcedCons="{!v.enforcedCons}" awfulCons="{!v.awfulCons}"/> 
+    <c:threeMethodsComponent strippedCons="{!v.strippedCons}" enforcedCons="{!v.enforcedCons}" schemaNamespaceCons="{!v.schemaNamespaceCons}"/> 
 
 </aura:component>

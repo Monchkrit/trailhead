@@ -1,7 +1,7 @@
 <aura:component  controller="ThreeMethods" implements="flexipage:availableForAllPageTypes">
 	<aura:attribute name="strippedCons" type="Contact[]" />
   <aura:attribute name="enforcedCons" type="Contact[]" />
-  <aura:attribute name="awfulCons" type="Contact[]" />
+  <aura:attribute name="schemaNamespaceCons" type="Contact[]" />
   <aura:attribute name="columns" type="List" />
   
     <lightning:button label="Get Stripped Contacts" onclick="{! c.tabinit}" />
@@ -27,10 +27,10 @@
     </aura:iteration> -->
 
 
-    <lightning:button label="Get Awful Contacts" onclick="{! c.tabinit}" />      
+    <lightning:button label="Get Schema Namespace Contacts" onclick="{! c.tabinit}" />      
         <lightning:datatable
         keyField="Id"
-        data="{! v.awfulCons}"
+        data="{! v.schemaNamespaceCons}"
         columns="{! v.columns}"/>
         
     <!-- <aura:iteration var="awful" items="{! v.awfulCons}">

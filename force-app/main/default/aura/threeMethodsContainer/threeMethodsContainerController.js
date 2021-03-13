@@ -23,12 +23,12 @@
       $A.enqueueAction(action);
     },
   
-    getAwfulCons : function(cmp){
+    getSchemaNamespace : function(cmp){
       let action = cmp.get("c.schemaNamespaceClasses");
       action.setCallback(this, function(response){
         let state = response.getState();
         if (state === "SUCCESS"){
-          cmp.set("v.awfulCons", response.getReturnValue());
+          cmp.set("v.schemaNamespaceCons", response.getReturnValue());
         }
       });
       $A.enqueueAction(action);
