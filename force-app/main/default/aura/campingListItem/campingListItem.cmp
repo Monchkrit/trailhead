@@ -1,0 +1,7 @@
+<aura:component>
+  <aura:attribute name="item" type="Camping_Item__c" />
+  <p>The item is a {! item.Name}</p>
+  <p>Amount:
+    <lightning:formattedNumber value="{! v.item.Price__c}" style="currency" />
+  </p>
+</aura:component>
