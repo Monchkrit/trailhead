@@ -1,0 +1,40 @@
+<aura:component  controller="ThreeMethods" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="strippedCons" type="Contact[]" />
+  <aura:attribute name="enforcedCons" type="Contact[]" />
+  <aura:attribute name="awfulCons" type="Contact[]" />
+  <aura:attribute name="columns" type="List" />
+  
+    <lightning:button label="Get Stripped Contacts" onclick="{! c.tabinit}" />
+    
+      <lightning:datatable
+      keyField="Id"
+      data="{! v.strippedCons}"
+      columns="{! v.columns}"
+      hideCheckboxColumn="true"/>
+      
+    <!-- <aura:iteration var="con" items="{! v.strippedCons}">
+      <p>{!con.Id}, {!con.LastName}</p>
+    </aura:iteration> -->
+
+
+    <lightning:button label="Get Enforced Contacts" onclick="{! c.tabinit}" /> -->
+        <lightning:datatable
+        keyField="Id"
+        data="{! v.enforcedCons}"
+        columns="{! v.columns}"/>
+    <!-- <aura:iteration var="enfcon" items="{! v.enforcedCons}">
+      <p>{!enfcon.Id}, {! enfcon.LastName}</p>
+    </aura:iteration> -->
+
+
+    <lightning:button label="Get Awful Contacts" onclick="{! c.tabinit}" />      
+        <lightning:datatable
+        keyField="Id"
+        data="{! v.awfulCons}"
+        columns="{! v.columns}"/>
+        
+    <!-- <aura:iteration var="awful" items="{! v.awfulCons}">
+      <p>{!awful.Id}, {! awful.LastName}</p>
+    </aura:iteration> -->
+
+</aura:component>
